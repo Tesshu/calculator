@@ -9,7 +9,7 @@ exports.calculate = function(req, res) {
     res.status(400);
     res.json({ error: err.message });
   });
-
+  // Using + operator to coerce variables to numbers to avoid string concatenation.
   var operations = {
     'add':      function(a,b) { return +a + +b },
     'subtract': function(a,b) { return a - b },
